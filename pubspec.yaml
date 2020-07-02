@@ -18,3 +18,5 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
+  assets:
+    - lib/model/contact_model_examples.json

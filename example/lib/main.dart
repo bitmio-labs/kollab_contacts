@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kollab_contacts/contact_detail.dart';
-import 'package:kollab_contacts/model/contact_model.dart';
+import 'package:kollab_contacts/kollab_contacts.dart';
 import 'package:kollab_theme/kollab_theme.dart';
 
 void main() async {
@@ -36,13 +35,9 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  Stream<Contact> _contacts = (() async* {
+  Stream<Contacts> _contacts = (() async* {
     final contacts = await Contacts.examples;
-    yield contacts.items[0];
-    await Future<void>.delayed(Duration(seconds: 1));
-    yield contacts.items[1];
-    await Future<void>.delayed(Duration(seconds: 1));
-    yield contacts.items[2];
+    yield contacts;
   })();
 
   Widget build(BuildContext context) {
@@ -52,9 +47,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       child: Container(
         alignment: FractionalOffset.center,
         color: Colors.white,
-        child: StreamBuilder<Contact>(
+        child: StreamBuilder<Contacts>(
           stream: _contacts,
-          builder: (BuildContext context, AsyncSnapshot<Contact> snapshot) {
+          builder: (BuildContext context, AsyncSnapshot<Contacts> snapshot) {
             List<Widget> children;
             if (snapshot.hasError) {
               children = <Widget>[
@@ -100,12 +95,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 case ConnectionState.done:
                   children = <Widget>[
                     Expanded(
-                        child: ContactDetail(
-                            contact: snapshot.data, theme: this.widget.theme)),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 16),
-                      child: Text('Success!'),
-                    )
+                        child: ContactsScene(
+                            contacts: snapshot.data, theme: this.widget.theme))
                   ];
                   break;
               }
