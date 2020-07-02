@@ -1,7 +1,4 @@
 library kollab_contacts;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'contact_detail.dart';
+export 'model/contact_model.dart';

@@ -82,10 +82,10 @@ packages:
   kollab_theme:
     dependency: transitive
     description:
-      path: "../../kollab_theme"
-      relative: true
-    source: path
-    version: "0.0.4"
+      name: kollab_theme
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.5"
   matcher:
     dependency: transitive
     description:

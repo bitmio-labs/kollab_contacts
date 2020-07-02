@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:kollab_contacts/model/contact_model.dart';
+import 'package:kollab_contacts/kollab_contacts.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
