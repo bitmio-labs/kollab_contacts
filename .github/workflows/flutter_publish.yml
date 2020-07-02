@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Remove Github Pages to allow publishing
+        run: rm -rf docs
       - name: Publish
         uses: sakebook/actions-flutter-pub-publisher@v1.3.0
         with:

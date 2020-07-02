@@ -1,8 +1,7 @@
 name: kollab_contacts
 description: A new Flutter package project.
-version: 0.0.1
-author:
-homepage:
+version: 0.0.2
+homepage: https://github.com/bitmio-labs/kollab_contacts
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -10,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  kollab_theme: 0.0.5
+  kollab_theme: ^0.0.5
   url_launcher: ^5.4.11
 
 dev_dependencies:
