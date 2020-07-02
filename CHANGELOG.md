@@ -1,3 +1,7 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.2] - 2020-07-02.
 
-* TODO: Describe initial release.
+* Add contacts list view.
+
+## [0.0.1] - 2020-07-02.
+
+* Initial release.
