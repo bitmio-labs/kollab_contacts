@@ -16,6 +16,7 @@ class ContactDetail extends StatelessWidget {
         appBar: AppBar(
           leading: new IconButton(
             icon: Container(
+              padding: EdgeInsets.symmetric(horizontal: 10),
               height: 36,
               width: 36,
               decoration: BoxDecoration(
